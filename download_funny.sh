@@ -9,12 +9,12 @@ do
 	NAME=${LINK##*/}
 	NAME=${NAME%%.*}  #name of joke (also the file)
 	NAME+=".txt"
-    	lynx --dump -nomargins $LINK > $NAME  #download plain text of the joke
-
-	CATEGORY=$(grep pridané $NAME)  
+	lynx --dump -nomargins $LINK > $NAME  #download plain text of the joke	
+	CATEGORY=$(grep 'pridané' $NAME | grep 'pod')  
 	CATEGORY=${CATEGORY##*]}  #take category of the joke
+	CATEGORY=${CATEGORY%% pridal*} #removes pridal tag
 	sed -i '/\[plu.png\]/,$d' $NAME
-	sed -i '1,/pridané/d' $NAME  #filter text of joke
+	sed -i '1,/pridané/d' $NAME  #filter text of jok
 	echo -n $CATEGORY >> $NAME  #add category to last line
 	#sed -i '/^$/d' $NAME  #remove empty lines
 	sed -i '1,7d' $NAME  #remove first 5 lines of shit

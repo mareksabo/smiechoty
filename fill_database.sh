@@ -27,9 +27,12 @@ do
 	fi
 
 	#insert joke
-	mysql <<-EOF 
-	INSERT INTO jokes (name, text, category_id) VALUES ('$name', '$text','$number'); 
-	EOF
+	if [ -n "$text" ]; then #if text is not null
+		mysql <<-EOF 
+		INSERT INTO jokes (name, text, category_id) VALUES ('$name', '$text','$number');
+		EOF
+	bash ./update_joke_id.sh #update max joke_id
+	fi
 	cp $file /home/ubuntu/jokes/pridane_vtipy #add joke do directory 
 done
 
