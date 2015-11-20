@@ -1,0 +1,19 @@
+V Poľsku v časoch tuhého socializmu si jeden docent matematiky spočítal, že
+robotník v lodenici zarobí 3x viac ako on. A tak si v občianskom preškrtal
+tituly pred a za menom a šiel pracovať do lodenice.
+
+V lodenici sa mu darilo, moc sa s prácou nepretrhla a dostával 3x viac ako na
+škole. Potom lodenica založila večerné školu pre robotníkov, a že kto tam bude
+chodiť, dostane pridané. Docent sa zapísal a začal chodiť. Hneď prvú hodinu,
+bác, matematika. Obtiažnosť ako v prvom ročníku na strednej, takže docent len
+tak pospáva a nedáva pozor. Všimne si ho učiteľ, vyvolá k tabuli a dá mu
+spočítať obsah kruhu.
+
+Docent začne písať, ale ani za svet si nemôže spomenúť na vzorec pre obsah
+kruhu, takže sa to rozhodne odvodiť. Napíše si prevod do polárnych súradníc,
+potom to integruje a vyjde mu mínus pí er na2, tak tam stojí a rozmýšľa, kde sa
+tam vzalo to mínus.
+
+A z posledného radu niekto zašepká: \"Otoč interval integrácie ...\"
+
+Pracovať, pracovať...

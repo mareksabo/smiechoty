@@ -1,0 +1,27 @@
+Dobrý deň, vlani som urobil upgrade PRIATEĽKY 1.0 na verziu MANŽELKA 1.0 a nový
+program nečakane spustil proces DETI, s mimoriadne veľkou spotrebou pamäte a
+systémových zdrojov. V manuáli nie je táto funkcia spomínaná. Mimo to Manželka
+1.0 tiež zasahuje do ostatných programov a naťahuje sa už pri bootovaní systému.
+Ostatné programy, ako napríklad Nočný Poker 10.3 a Pivo 2.5 od tej doby prestali
+fungovať, pri ich spustení sa systém zrúti. Zdá sa, že Manželku 1.0 nemôžem
+odstrániť zo systému. Uvažoval som o návrate k Priateľku 1.0, ale uninstall
+skončil neúspešne.
+Môžete mi niekto poradiť?
+ODPOVEĎ:
+Vážený užívateľ, toto je veľmi častý problém. Mnoho ľudí prechádza z Priateľky
+1.0 na Manželku 1.0, domnievajúc sa, že je to len neškodná zábavná utilita. Ale
+Manželka 1.0 je operačný systém, navrhnutý tak, aby sám spúšťal ostatné
+aplikácie. Nepúšťajte sa do inštalácie!
+Dodatočné odstránenie Manželky 1.0 môže mať za následok poškodenie systémových
+zdrojov. Niektorí sa pokúšali inštalovať Priateľku 2.0, resp. Manželku 2.0, ale
+narazili na viac problémov, než v pôvodnom systéme.
+Iní skúšali spúšťať Priateľku 2.0 paralelne na pozadí.
+Bohužiaľ, Manželka 1.0 detekuje prítomnosť Priateľky 2.0, čo zapríčiňuje
+konflikty s následným kolapsom systému. Jediná možnosť, ako sa vyhnúť problémom,
+je neinštalovať software Manželka, ale používať len Priateľku. Verzia Priateľka
+1.0, 2.0, 3.0 atď., Sú navzájom kompatibilné, dokonca sa môžu prevádzkovať
+paralelne. Teraz je už neskoro, môžete len varovať svojich známych.
+Ešte varujeme: dajte si pozor na nedokumentovanú automatickú inštaláciu programu
+Svokra 6.4
+
+Muži versus ženy

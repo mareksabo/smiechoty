@@ -1,0 +1,7 @@
+Sedia tri opice pri strome a vsadia sa ktorá vylezie najvyššie na strom.  Lezie
+prvá, lezie, lezie a zrazu sa pod ňou odlomí vetva a spadne na zem. Ide druha
+lezie, lezie a tiež sa pod ňou odlomí vetva a spadne na zem. Nakoniec je na rade
+tretia. Tá nejde a opice sa ju pýtajú prečo nelezie. ona odpovedá, že by aj tak
+spadla.
+
+Zvieracia farma
