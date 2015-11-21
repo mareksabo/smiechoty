@@ -1,7 +1,0 @@
-lord: \"Jean, kedy sme boli naposledy na love kačíc?\"
-sluha: \"Včera, sir.\"
-lord: \"No vidíte, prečo sme teda mali na obed zase koninu?\"
-sluha: \"Ľutujem sir, ale kuchár pripraví vždy len to, čo vaše lordstvo ráči
-trafiť.\"
-
-Páni a ich sluhovia

@@ -1,2 +1,0 @@
-nehoda.txt
-sofer-kamionu.txt
