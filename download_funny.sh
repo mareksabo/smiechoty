@@ -1,5 +1,6 @@
 #! /bin/bash
 
+DUPLICATES='../duplicates.txt'
 cd ./www.funny.sk
 
 while read line
@@ -9,6 +10,9 @@ do
 	NAME=${LINK##*/}
 	NAME=${NAME%%.*}  #name of joke (also the file)
 	NAME+=".txt"
+	if [ -f "$NAME" ]; then # if file already exists
+		echo $NAME >> $DUPLICATES
+	fi
 	lynx --dump -nomargins $LINK > $NAME  #download plain text of the joke	
 	CATEGORY=$(grep 'pridané' $NAME | grep 'pod')  
 	CATEGORY=${CATEGORY##*]}  #take category of the joke
@@ -21,10 +25,19 @@ do
 	sed -i 's/   //' $NAME  #remove first 3 spaces
 	sed -i 's/\"/\\\"/g' $NAME #add \ before each "
 	sed -i s/\'/"\\\'"/ $NAME  #add \ before each '
+	if ! [ `wc -l $NAME	| awk '{print $1}'` -ge "2" ]; then
+		cp $NAME /home/ubuntu/jokes/wrong_jokes/$NAME
+		echo $LINK >> $NAME
+		mail -s "Joke without lines" smiechotiny@gmail.com <<< $NAME
+		rm $NAME
+	fi
 done <links_to_download.txt
 
 rm -rf rss links_to_download.txt new_links.txt output.txt
-
+if [ -f $DUPLICATES ]; then
+	mail -s "Duplicates found" smiechotiny@gmail.com <<< `cat $DUPLICATES` 
+	#rm DUPLICATES #TODO uncomment
+fi
 cd ..
 bash ./fill_database.sh
 
