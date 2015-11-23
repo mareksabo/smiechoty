@@ -38,7 +38,7 @@ done <links_to_download.txt
 
 rm -rf rss links_to_download.txt new_links.txt output.txt
 if [ -f $DUPLICATES ]; then
-	mail -s "Duplicates found" smiechotiny@gmail.com <<< `cat $DUPLICATES` 
+	{ echo -e "Number of duplicates:" `cat $DUPLICATES | wc -l` "\n" ; cat duplicates.txt ; } | mail -s "Duplicates found" smiechotiny@gmail.com
 	#rm DUPLICATES #TODO uncomment
 fi
 cd ..
