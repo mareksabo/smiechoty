@@ -10,8 +10,11 @@ do
 	NAME=${LINK##*/}
 	NAME=${NAME%%.*}  #name of joke (also the file)
 	NAME+=".txt"
-	if [ -f "$NAME" ]; then # if file already exists
+	if [ -f "$NAME" ] || [ -f "~/jokes/pridane_vtipy/$NAME" ]; then # if file already exists
 		echo $NAME >> $DUPLICATES
+		NAME=${NAME::-4} #cut .txt part
+		NAME+="$(( ( RANDOM % 10000000 )  + 1 ))" #add random number
+		NAME+=".txt"
 	fi
 	lynx --dump -nomargins $LINK > $NAME  #download plain text of the joke	
 	CATEGORY=$(grep 'pridané' $NAME | grep 'pod')  
@@ -27,8 +30,8 @@ do
 	sed -i s/\'/"\\\'"/ $NAME  #add \ before each '
 	if ! [ `wc -l $NAME	| awk '{print $1}'` -ge "2" ]; then
 		cp $NAME /home/ubuntu/jokes/wrong_jokes/$NAME
-		echo $LINK >> $NAME
-		mail -s "Joke without lines" smiechotiny@gmail.com <<< $NAME
+		message="$NAME"$'\n'"$LINK"	
+		mail -s "Joke without lines" smiechotiny@gmail.com <<< "$message"
 		rm $NAME
 	fi
 done <links_to_download.txt
