@@ -137,7 +137,6 @@
 <link>http://www.funny.sk/zabavny-vtip/102744/prikazania.htm</link>
 <link>http://www.funny.sk/zabavny-vtip/102745/synovia.htm</link>
 <link>http://www.funny.sk/zabavny-vtip/102746/otec-a-syn.htm</link>
-<link>http://www.funny.sk/zabavny-vtip/102791/jedna-zaujimavost-o-slovensku.htm</link>
 <link>http://www.funny.sk/zabavny-vtip/102890/matka-a-dcera.htm</link>
 <link>http://www.funny.sk/zabavny-vtip/102891/dedo-v-poistovni.htm</link>
 <link>http://www.funny.sk/zabavny-vtip/102904/manzel-a-manzelka.htm</link>
@@ -269,3 +268,5 @@
 <link>http://www.funny.sk/zabavny-vtip/108494/prieskum.htm</link>
 <link>http://www.funny.sk/zabavny-vtip/108551/kolko-muzov-ma-hiv.htm</link>
 <link>http://www.funny.sk/zabavny-vtip/108582/ranajky.htm</link>
+<link>http://www.funny.sk/zabavny-vtip/108662/manzelka-alebo-milenka.htm</link>
+<link>http://www.funny.sk/zabavny-vtip/108678/povrchne-zeny.htm</link>

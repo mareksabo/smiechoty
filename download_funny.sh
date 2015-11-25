@@ -12,9 +12,12 @@ do
 	NAME+=".txt"
 	if [ -f "$NAME" ] || [ -f "~/jokes/pridane_vtipy/$NAME" ]; then # if file already exists
 		echo $NAME >> $DUPLICATES
-		NAME=${NAME::-4} #cut .txt part
-		NAME+="$(( ( RANDOM % 10000000 )  + 1 ))" #add random number
-		NAME+=".txt"
+		while [ -f "$NAME" ] || [ -f "~/jokes/pridane_vtipy/$NAME" ]
+		do
+			NAME=${NAME::-4} #cut .txt part
+			NAME+="$(( ( RANDOM % 10000000 )  + 1 ))" #add random number
+			NAME+=".txt"
+		done
 	fi
 	lynx --dump -nomargins $LINK > $NAME  #download plain text of the joke	
 	CATEGORY=$(grep 'pridané' $NAME | grep 'pod')  
@@ -27,7 +30,7 @@ do
 	sed -i '1,7d' $NAME  #remove first 5 lines of shit
 	sed -i 's/   //' $NAME  #remove first 3 spaces
 	sed -i 's/\"/\\\"/g' $NAME #add \ before each "
-	sed -i s/\'/"\\\'"/ $NAME  #add \ before each '
+	sed -i "s/'/\\\'/g" $NAME  #add \ before each '
 	if ! [ `wc -l $NAME	| awk '{print $1}'` -ge "2" ]; then
 		cp $NAME /home/ubuntu/jokes/wrong_jokes/$NAME
 		message="$NAME"$'\n'"$LINK"	
@@ -38,9 +41,11 @@ done <links_to_download.txt
 
 rm -rf rss links_to_download.txt new_links.txt output.txt
 if [ -f $DUPLICATES ]; then
-	{ echo -e "Number of duplicates:" `cat $DUPLICATES | wc -l` "\n" ; cat duplicates.txt ; } | mail -s "Duplicates found" smiechotiny@gmail.com
-	#rm DUPLICATES #TODO uncomment
+  number=`cat $DUPLICATES | wc -l`
+	inside=`cat $DUPLICATES`
+	message="Number of duplicates: $number"$'\n'"$inside"
+	mail -s "Duplicates found" smiechotiny@gmail.com <<< $message
+	rm ../duplicates.txt
 fi
 cd ..
 bash ./fill_database.sh
-
