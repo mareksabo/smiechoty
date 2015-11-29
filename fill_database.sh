@@ -22,7 +22,7 @@ do
 		if [ "$number" -eq -1 ]; then #if category wasnt find in DB, add it
 			$(mysql -e "INSERT INTO categories (name) VALUES ('$category');" )
 			if [ "$?" -ne 0 ]; then
-		  	echo "Insert category: -$category- error" >> error.txt
+		  	echo "Insert category: $category" >> insert_error.txt
 			fi
 			number=$(mysql -se "SELECT category_id FROM categories where name like '$category'") #and get its ID
 		fi
@@ -31,11 +31,11 @@ do
 		if [ -n "$text" ]; then #if text is not null
 			$(mysql -e "INSERT INTO jokes (name, text, category_id) VALUES ('$name', '$text','$number');")
 			if [ "$?" -ne 0 ]; then
-		    echo "Insert joke: $name error" >> error.txt
+		    echo "Insert joke: $name" >> insert_error.txt
 			fi	
-			#TODO bash ./update_joke_id.sh #update max joke_id
 		fi
 		cp $file /home/ubuntu/jokes/pridane_vtipy #add joke do directory 
 done
 
+bash /home/ubuntu/jokes/update_joke_id.sh #update max joke_id
 rm -rf www.funny.sk
