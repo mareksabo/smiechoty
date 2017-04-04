@@ -1,7 +1,8 @@
 Welcome to our funny repository!
 ================
-This project is quite new, we are currently working on it.
+
+This is an outdated project.
 ____
 
 ## About
-This project is about collecting jokes and share them.
+This project was about collecting jokes and share them.
